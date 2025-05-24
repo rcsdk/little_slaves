@@ -1,4 +1,3 @@
----
 
 ## 🔄 Comparative Analysis: Acer Aspire VX15 vs. Samsung Galaxy Book2 Pro
 
