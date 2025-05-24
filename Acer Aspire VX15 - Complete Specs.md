@@ -181,7 +181,25 @@ Let's combine this with the information from Report 1 (`https://0x0.st/8x-4.json
         *   **`Pcie_link_width_max`:** `16`
             *   *Implication:* **Potential Bottleneck/Issue Here!**
                 *   The GPU is currently running at **PCIe Gen 1** speed, even though it and the system likely support PCIe Gen 3.
-                *   It *is* using the full x16 width, which is good.
+                *   It *is* using the full x16 width, wAcer Aspire VX15 - Complete Specs
+
+**Report 2 (Acer Aspire VX15 - Focused LLM/GPU Deep Dive):** `https://0x0.st/8xoH.json`
+
+Let's combine this with the information from Report 1 (`https://0x0.st/8x-4.json`) to get the full, detailed picture.
+
+**Combined Analysis of Acer Aspire VX15 (Report 1 + Report 2):**
+
+**1. OS & Kernel (From Report 1 - Confirmed):**
+    *   Distribution: `Debian GNU/Linux 12 (bookworm)`
+    *   Kernel: `6.8.9-amd64`
+
+**2. CPU Information (From Report 1 - Confirmed):**
+    *   Model: `Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz` (4 Cores / 8 Threads)
+    *   AVX2: Yes
+    *   AVX512F: No
+    *   Governor: `performance` (Good!)
+
+**3. Memory (RAM & Swap) (From Report 1 - Confirmed):hich is good.
                 *   PCIe Gen 1 x16 has a theoretical bandwidth of 4 GB/s. PCIe Gen 3 x16 is 15.75 GB/s.
                 *   This could be due to aggressive power saving by the NVIDIA driver when idle. It *should* ramp up to Gen 3 under load.
                 *   **Action:** We need to verify if it ramps up to Gen 3 when a CUDA application (like `llama.cpp`) is running. If it stays at Gen 1, it will significantly hinder performance when transferring data to/from VRAM (e.g., loading models, swapping layers if VRAM is full).
