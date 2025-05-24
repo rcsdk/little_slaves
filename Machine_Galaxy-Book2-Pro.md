@@ -6,7 +6,7 @@ Platform: Linux-6.12.25-amd64-x86_64-with-glibc2.41 (This is a custom kernel ver
 Distribution: PRETTY_NAME="Kali GNU/Linux Rolling" (Consistent with your other machine).
 Kernel_Version_uname: 6.12.25-amd64
 Implication: Modern Kali Linux setup.
-CPU_Info:
+CPU_Info:a
 Model_Name: 12th Gen Intel(R) Core(TM) i7-1260P
 Physical_Cores: 12
 Total_Logical_Cores: 16 (4 P-cores with HT + 8 E-cores)
