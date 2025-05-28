@@ -46,19 +46,18 @@ Let's build Mountain Shelter. No excuses.
 .
 
 
-**Mountain Shelter** is a dual-host, self-healing, zero-cloud local AI ops system for high-performance LLM (Large Language Model) workloads. It runs across two battle-hardened Linux machines:
+🏔️ Mountain Shelter
+Mountain Shelter is a dual-host, self-healing, zero-cloud local AI ops system for high-performance LLM workloads. It runs across two battle-hardened Linux machines:
 
-- **Phantom** (Galaxy Book2 Pro): CPU-centric orchestrator, lightning-fast NVMe, Intel AVX2, iGPU OpenCL experimental.
-- **Shadow** (Acer Aspire VX15): GPU-centric workhorse, NVIDIA GTX 1050 Ti, CUDA 12.x stack, AVX2, legacy HDD bottleneck (noted for masochists).
+Phantom (Galaxy Book2 Pro): CPU-centric orchestrator, lightning-fast NVMe, Intel AVX2, iGPU OpenCL experimental.
+Shadow (Acer Aspire VX15): GPU-centric workhorse, NVIDIA GTX 1050 Ti, CUDA 12.x stack, AVX2, legacy HDD bottleneck (noted for masochists).
+This setup enables mirrored, hardware-optimized task allocation, robust telemetry, and modular extensibility.
+No cloud. No SaaS. No external dependencies beyond what you control.
 
-This setup enables mirrored, hardware-optimized task allocation, robust telemetry, and modular extensibility. No cloud. No SaaS. No external dependencies beyond what you control.
+☄️ Architecture Overview
+Mirrored, Hardened Layout
 
-
-## ☄️ Architecture Overview
-
-### **Mirrored, Hardened Layout**
-
-```plaintext
+Code
 /home/rc/.mountain_shelter/
 ├── agents/         # Multi-agent definitions, logic, roles
 ├── dashboards/     # Config files for monitoring UIs
@@ -68,10 +67,9 @@ This setup enables mirrored, hardware-optimized task allocation, robust telemetr
 ├── scripts/        # Diagnostics, installers, watchdogs
 ├── venv/           # Python environment (host-specific)
 └── shared.cfg      # Shared config: ports, hostnames, etc.
-```
-- **Rsync, SSH orchestration, agent model-swapping:** Seamless. Both hosts always in lock-step. No excuses.
+Rsync, SSH orchestration, agent model-swapping: Seamless. Both hosts always in lock-step. No excuses.
 
----
+
 
 ## 🧠 LLM Stack: Advanced, Not Consumer-Grade
 
