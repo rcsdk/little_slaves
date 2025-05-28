@@ -1,8 +1,5 @@
-
----
-
-🏔️ Mountain Shelter: Exit the Noise
-This isn’t rebellion. It’s refinement. Quiet mastery at the edge of the world. Nothing to prove—and everything to explore. Just unfettered engineering and a lot of Black Music & Jazz, and on special moments: silence.
+# 🏔️ Mountain Shelter: Exit the Noise
+This isn’t rebellion. It’s refinement. Quiet mastery at the edge of the world. Nothing to prove—and everything to explore. Just unfettered engineering and a lot of Black Music & Jazz, and on special moments: silence. 
 
 
 ---
