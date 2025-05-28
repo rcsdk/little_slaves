@@ -1,2 +1,2 @@
-# little_slaves
+Mountain Shelter
 Make 'em work! 
