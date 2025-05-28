@@ -85,12 +85,104 @@ Let us begin the real work.
 
 
 
+==================================================================================
+
+ENGINEER VERSION
 
 
+# MOUNTAIN SHELTER ENGINEERING PROTOCOL (v4.7)
+
+## HARDWARE SPECS
+```bash
+# PHANTOM (Controller)
+• CPU: i7-1260P (12C/16T) @ 4.7GHz | AVX-512
+• RAM: 16GB LPDDR5 (6400MT/s) → 51.2GB/s bw
+• Storage: 1TB NVMe (Seq R/W: 3500/3000 MB/s)
+
+# SHADOW (Compute)
+• GPU: GTX 1050 Ti (4GB GDDR5 @ 7Gbps)
+• PCIe: 3.0 x16 (15.75GB/s theoretical)
+• CPU: i7-7700HQ (4C/8T) → AVX2 only
+ENGINEERING DIRECTIVES
+Maximize Local Compute Density
+
+Quantization: GGUF Q4_K_M minimum
+
+VRAM Optimization: Layer-wise GPU offload
+
+CPU: Enable performance governor
+
+Dual-Host Synergy
+
+Phantom: Runs llama.cpp --server
+
+Shadow: Handles GPU-accelerated tasks
+
+Comms: ZeroMQ over Ethernet (TCP_NODELAY)
+
+Proven Optimization Paths
+
+python
+# Model Execution Priority:
+1. Mistral-7B (Q4) → Phantom CPU
+2. Phi-3-mini (Q4) → Shadow GPU
+3. Custom merges → Benchmark first
+
+# Critical Bash Tweaks:
+echo 1 > /proc/sys/vm/compact_memory
+sudo cpufreq-set -g performance
+DEBUGGING PROTOCOLS
+bash
+# Memory Issues:
+grep -i "oom" /var/log/kern.log
+
+# GPU Bottlenecks:
+nvidia-smi dmon -s pu -c 5
+
+# Latency Debug:
+sudo tcprstat -p 8008 -t 1 -n 0
+FAILURE MODES
+Symptom	Diagnosis	Fix
+High CPU temps	Insufficient cooling	Throttle to 3.5GHz
+GPU OOM	Layer offload failure	Reduce context size
+Network latency	TCP buffering	setsockopt(TCP_NODELAY)
+LOADOUT PRIORITIES
+Stable Base
+
+Ubuntu 22.04 LTS
+
+XanMod kernel (6.6.xx)
+
+Python 3.10 venv
+
+Core Stack
+
+bash
+pip install \
+    llama-cpp-python[openblas] \
+    transformers \
+    torch==2.2.1+cu118 \
+    fastapi
+PERFORMANCE TARGETS
+• Phantom: 12-15 tokens/sec (Mistral-7B-Q4)
+• Shadow: 18-22 tokens/sec (Phi-3-Q4)
+• Network: <2ms ping between hosts
+
+HARD LIMITS
+No cloud fallback
+
+All data local
+
+Failures must NOT require physical access
+
+AUDIT TRAIL
+bash
+# System Snapshot:
+inxi -Fxz > /home/rc/.mountain_shelter/audit/$(date +%s).log
+Execute with precision.
 
 
-
-
+--------------------------------------------------------------------------
 
 
 SYSTEM PROMPT - "MOUNTAIN SHELTER RESEARCH INITIATIVE"
