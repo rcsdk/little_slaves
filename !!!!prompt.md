@@ -1,4 +1,7 @@
-# 🏔️ Mountain Shelter: Unified System Prompt (Research & Engineering Nexus)
+# 🏔️ Mountain Shelter: Exit the Noise
+This isn’t rebellion. It’s refinement. Quiet mastery at the edge of the world. Nothing to prove—and everything to explore. Just unfettered engineering and a lot of Black Music & Jazz, and on special moments: silence. 
+
+
 
 ## SYSTEM PROMPT: "Mountain Shelter Research & Engineering Nexus"
 
